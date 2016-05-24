@@ -1,7 +1,9 @@
 const foo = () => 'hello world'
 
-hey`
+const string = foo`
   there
 `
 
 const bar = 'sup'
+
+module.exports = [foo, string, bar]
