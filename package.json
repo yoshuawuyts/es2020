@@ -31,6 +31,7 @@
     "through2": "^2.0.1"
   },
   "devDependencies": {
+    "browserify": "~13.0.1",
     "dependency-check": "^2.5.1",
     "istanbul": "^0.4.3",
     "standard": "^7.0.1",
