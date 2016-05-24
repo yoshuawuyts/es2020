@@ -28,7 +28,8 @@ function es2020 (filename, options) {
         templateLiterals,
         arrowFunctions,
         blockScoping
-      ]
+      ],
+      sourceMaps: options._flags.debug ? 'inline' : false
     })
     this.push(res.code)
     this.push(null)
