@@ -1,6 +1,5 @@
 # es2020 [![stability][0]][1]
-[![npm version][2]][3] [![build status][4]][5] [![test coverage][6]][7]
-[![downloads][8]][9] [![js-standard-style][10]][11]
+[![npm version][2]][3] [![downloads][8]][9] [![js-standard-style][10]][11]
 
 `browserify` transform that compiles a selection of ES6 features to valid ES5,
 because in hindsight we can do without most of ES6:
