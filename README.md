@@ -5,8 +5,8 @@
 because in hindsight we can do without most of ES6:
 - `fat arrows` - make inline functions cute-looking
 - `template strings` / `tagged templates` - enable DSLs inside of JS
-- `const` - using `const` by default makes it obvious when a value is used that
-  is replaced (`var`)
+- `const` - using `const` by default makes it easy to spot where values are
+  being redeclared
 
 ## Usage
 __Via `package.json` (recommended):__
