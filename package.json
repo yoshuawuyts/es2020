@@ -1,0 +1,39 @@
+{
+  "name": "es2020",
+  "version": "1.0.0",
+  "description": "browserify transform that compiles a selection of ES6 to valid ES5",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "test": "standard && npm run deps && NODE_ENV=test node test",
+    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "yoshuawuyts/es2020",
+  "keywords": [
+    "es6",
+    "babel",
+    "transform",
+    "fat-arrows",
+    "template-strings",
+    "tagged-templates",
+    "const",
+    "var",
+    "esnext",
+    "browserify"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.9.0",
+    "babel-plugin-check-es2015-constants": "^6.8.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.9.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.8.0",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.5.1",
+    "istanbul": "^0.4.3",
+    "standard": "^7.0.1",
+    "tape": "^4.5.1"
+  }
+}
