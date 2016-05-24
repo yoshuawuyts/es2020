@@ -36,7 +36,7 @@ browserify('./client.js')
 
 ## FAQ
 ### Is this a joke?
-Not really. The TC39 does not represent my interests, and the feature they
+Not really. The TC39 does not represent my interests, and the features they
 introduce are not useful for the stuff I'm doing.
 [I'm](https://github.com/whatwg/streams)
 [bloody](https://docs.google.com/presentation/d/1H3E2ToJ8VHgZS8eS6bRv-vg5OksObj5wv6gyzJJwOK0/edit)
