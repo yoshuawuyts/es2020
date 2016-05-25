@@ -59,6 +59,9 @@ project is not democratically governed.
 $ npm install es2020
 ```
 
+## See Also
+- [babel-preset-es2020](https://github.com/yoshuawuyts/babel-preset-es2020)
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 
