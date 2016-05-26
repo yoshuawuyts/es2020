@@ -40,3 +40,16 @@ test('source maps', function (t) {
     t.equal(original, fs.readFileSync(path.resolve(__dirname, 'example.js'), 'utf8'))
   })
 })
+
+test('handle errors', function (t) {
+  t.plan(1)
+
+  browserify({
+    debug: true
+  })
+  .add('LICENSE')
+  .transform(es2020)
+  .bundle(function (err, code) {
+    t.ok(err, 'handles error')
+  })
+})
