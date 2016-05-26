@@ -22,15 +22,20 @@ function es2020 (filename, options) {
 
   function end () {
     const src = Buffer.concat(bufs).toString('utf8')
-    const res = babel.transform(src, {
-      plugins: [
-        checkConstants,
-        templateLiterals,
-        arrowFunctions,
-        blockScoping
-      ],
-      sourceMaps: options._flags.debug ? 'inline' : false
-    })
+    try {
+      var res = babel.transform(src, {
+        plugins: [
+          checkConstants,
+          templateLiterals,
+          arrowFunctions,
+          blockScoping
+        ],
+        sourceMaps: options._flags.debug ? 'inline' : false
+      })
+    } catch (err) {
+      this.emit('error', err)
+      return
+    }
     this.push(res.code)
     this.push(null)
   }
