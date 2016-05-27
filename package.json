@@ -35,7 +35,7 @@
     "convert-source-map": "~1.2.0",
     "dependency-check": "^2.5.1",
     "istanbul": "^0.4.3",
-    "standard": "^7.0.1",
+    "standard": "^7.1.1",
     "tape": "^4.5.1"
   }
 }
