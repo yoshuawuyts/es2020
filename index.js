@@ -1,10 +1,6 @@
+const preset = require('babel-preset-es2020')
 const through = require('through2')
 const babel = require('babel-core')
-
-const templateLiterals = require('babel-plugin-transform-es2015-template-literals')
-const arrowFunctions = require('babel-plugin-transform-es2015-arrow-functions')
-const blockScoping = require('babel-plugin-transform-es2015-block-scoping')
-const checkConstants = require('babel-plugin-check-es2015-constants')
 
 module.exports = es2020
 
@@ -24,12 +20,7 @@ function es2020 (filename, options) {
     const src = Buffer.concat(bufs).toString('utf8')
     try {
       var res = babel.transform(src, {
-        plugins: [
-          checkConstants,
-          templateLiterals,
-          arrowFunctions,
-          blockScoping
-        ],
+        plugins: preset.plugins,
         sourceMaps: options._flags.debug ? 'inline' : false
       })
     } catch (err) {
