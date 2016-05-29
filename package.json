@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "babel-core": "^6.9.0",
+    "babel-core": "^6.9.1",
     "babel-preset-es2020": "^1.0.2",
     "through2": "^2.0.1"
   },
