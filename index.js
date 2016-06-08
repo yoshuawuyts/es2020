@@ -21,7 +21,7 @@ function es2020 (filename, options) {
     try {
       var res = babel.transform(src, {
         plugins: preset.plugins,
-        sourceMaps: options._flags.debug ? 'inline' : false
+        sourceMaps: options._flags.debug ? 'inline' : false,
         filename: filename
       })
     } catch (err) {
