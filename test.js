@@ -23,7 +23,7 @@ test('transpilation', function (t) {
 })
 
 test('source maps', function (t) {
-  t.plan(1)
+  t.plan(2)
 
   browserify({
     debug: true
@@ -35,9 +35,13 @@ test('source maps', function (t) {
     code = String(code)
 
     const data = sourceMap.fromSource(code)
-    const original = data.getProperty('sourcesContent')[1]
+    const original = {
+      code: data.getProperty('sourcesContent')[1],
+      path: data.getProperty('sources')[1]
+    }
 
-    t.equal(original, fs.readFileSync(path.resolve(__dirname, 'example.js'), 'utf8'))
+    t.equal(original.code, fs.readFileSync(path.resolve(__dirname, 'example.js'), 'utf8'))
+    t.equal(original.path, 'example.js')
   })
 })
 

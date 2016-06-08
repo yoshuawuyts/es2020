@@ -22,6 +22,7 @@ function es2020 (filename, options) {
       var res = babel.transform(src, {
         plugins: preset.plugins,
         sourceMaps: options._flags.debug ? 'inline' : false
+        filename: filename
       })
     } catch (err) {
       this.emit('error', err)
