@@ -7,6 +7,7 @@ module.exports = es2020
 // In hindsight we can do without most of ES6
 // (str, obj) -> transformStream
 function es2020 (filename, options) {
+  if (/\.json$/i.test(filename)) return through()
   const bufs = []
   const transformStream = through(write, end)
   return transformStream

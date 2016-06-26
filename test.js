@@ -45,6 +45,21 @@ test('source maps', function (t) {
   })
 })
 
+test('JSON files', function (t) {
+  t.plan(2)
+
+  browserify()
+    .add('example.json')
+    .transform(es2020)
+    .bundle(function (err, code) {
+      if (err) return t.end(err)
+      code = String(code)
+
+      t.assert(code.includes('same'), 'preserves key')
+      t.assert(code.includes('as it ever was'), 'preserves value')
+    })
+})
+
 test('handle errors', function (t) {
   t.plan(1)
 
