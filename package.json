@@ -1,6 +1,6 @@
 {
   "name": "es2020",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "browserify transform that compiles a selection of ES6 to valid ES5",
   "main": "index.js",
   "scripts": {
