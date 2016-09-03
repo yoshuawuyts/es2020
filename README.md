@@ -1,12 +1,13 @@
 # es2020 [![stability][0]][1]
 [![npm version][2]][3] [![downloads][8]][9] [![js-standard-style][10]][11]
 
-`browserify` transform that compiles a selection of ES6 features to valid ES5,
-because in hindsight we can do without most of ES6:
+`browserify` transform that compiles a selection of ES6 features to valid ES5:
 - `fat arrows` - make inline functions cute-looking
 - `template strings` / `tagged templates` - enable DSLs inside of JS
 - `const` - using `const` by default makes it easy to spot where values are
   being redeclared
+
+Because, in hindsight, we can do without most of ES6.
 
 ## Usage
 __Via `package.json` (recommended):__
